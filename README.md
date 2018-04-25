@@ -7,7 +7,7 @@ EasyLoraGateway will have the following features:
 2. Ability to forward Lora messages to a centralized servers (MQTT?)
 3. Ability to trigger HTTP requests and ping via Ethernet.
 4. Ability to save information to an optional SD Card.
-5. Ability to be cetrailized managed via cloud portral.
+5. Ability to be cloud managed via cloud portral.
 6. Ability to display a local web server for basic configuration of all the above.
 
 We will have a full box package at http://iotthinks.com (Coming soon).
