@@ -16,14 +16,25 @@ void offLED() {
   digitalWrite(LED, HIGH);
 }
 
+void ethStartOKLED() {
+  Serial.println("ETH starts OK. Got IP.");
+  for(int i = 0; i < 5; i++)
+  {
+    onLED();
+    delay(50);
+    offLED();
+    delay(50);
+  }
+}
+
 void loraStartOKLED() {
   Serial.println("Lora starts OK");
   for(int i = 0; i < 10; i++)
   {
     onLED();
-    delay(100);
+    delay(50);
     offLED();
-    delay(100);
+    delay(50);
   }
 }
 

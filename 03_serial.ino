@@ -1,10 +1,10 @@
 // ====================================
 // Serial
 // ====================================
-#define BAUD_RATE 115200
+#define BAUD_RATE 9600
 
 void setupSerial() {
-  Serial.begin(115200);
+  Serial.begin(BAUD_RATE);
 }
 
 

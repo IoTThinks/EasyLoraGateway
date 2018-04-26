@@ -2,9 +2,6 @@
 // Lora
 // https://github.com/sandeepmistry/arduino-LoRa/blob/master/API.md
 // ====================================
-#include <SPI.h>
-#include <LoRa.h>
-
 // CC2530 ZNP SPI interface
 #define LORA_SS   23
 #define LORA_SCK   18
