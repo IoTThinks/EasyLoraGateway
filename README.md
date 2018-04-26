@@ -12,3 +12,8 @@ EasyLoraGateway will have the following features:
 
 We will have a full box package at http://iotthinks.com (Coming soon).
 HAVE FUN.
+
+Updated 2018-04-26
+- Support Lora, MQTT and local Web server
+- Able to received Lora packets from a Lora node and forward to MQTT server.
+- Added a simple Web server to display the gateway status
