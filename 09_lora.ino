@@ -15,8 +15,8 @@
 #define LORA_BW 125E3
 #define LORA_PREAMBLE_LENGTH  8
 
-
-
+String LORA_STATUS="Not Initialized";
+String LORA_LASTRECEIVED_MSG ="";
 void setupLora() {
   Serial.println("Setting up LoRa");
   
@@ -30,11 +30,12 @@ void setupLora() {
   
   while (!LoRa.begin(433E6)) {
     Serial.println("Starting LoRa failed!");    
+    LORA_STATUS="FAILED";
     delay(1000);
   }
 
   loraStartOKLED();
-
+  LORA_STATUS = "OK";
   // register the receive callback
   //LoRa.onReceive(onReceive);
 
@@ -88,6 +89,7 @@ String receiveLoraMessage(){
 
     // Print message
     Serial.print(receivedLoraMessage);
+    LORA_LASTRECEIVED_MSG = receivedLoraMessage;
     
     // print RSSI of packet
     Serial.print("' with RSSI ");

@@ -7,6 +7,9 @@ MQTTClient mqttClient;
 
 unsigned long lastMillis = 0;
 
+String MQTT_STATUS = "Not Initialized";
+String MQTT_LASTSENT_MSG;
+
 void setupMQTT() {
   // Should be connected to internet
   mqttClient.begin(mqttBrokerServer, netClient);
@@ -29,7 +32,8 @@ void connectToMQTT() {
   }
 
   Serial.println("MQTT is connected");
-
+  MQTT_STATUS = "OK";
+  
   mqttClient.subscribe("/hello");
   // mqttClient.unsubscribe("/hello");
 }
@@ -49,6 +53,7 @@ void publishToMQTT(String message) {
   }
 
   mqttClient.publish("/hello", message);
+  MQTT_LASTSENT_MSG = message;
 }
 
 void testMQTT() {

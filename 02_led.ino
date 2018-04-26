@@ -2,10 +2,12 @@
 // LED
 // ====================================
 #define LED       32
+String LED_STATUS = "Not initalized";
 
 void setupLED() {
   pinMode(LED, OUTPUT);
   digitalWrite(LED, HIGH);
+  LED_STATUS = "OK";
 }
 
 void onLED() {

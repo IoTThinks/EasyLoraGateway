@@ -37,6 +37,8 @@ void setup() {
    delay(5000);
    setupMQTT();
    setupLora();
+   delay(5000);
+   setupWebServer();
 }
 
 void loop() {  
@@ -44,6 +46,7 @@ void loop() {
   //testHttpGet();
   //testMQTT();
   receiveAndForwardLoraMessage();
+  runWebServer();
 }
 
 void receiveAndForwardLoraMessage(){
