@@ -40,7 +40,17 @@ void setup() {
 }
 
 void loop() {  
-  //receiveLoraMessage();
+  //testReceiveLoraMessage();
   //testHttpGet();
-  testMQTT();
+  //testMQTT();
+  receiveAndForwardLoraMessage();
 }
+
+void receiveAndForwardLoraMessage(){
+  String message = receiveLoraMessage();
+  if(message != ""){
+    Serial.println("Forward to MQTT: " + message);
+    publishToMQTT(message);
+  }
+}
+

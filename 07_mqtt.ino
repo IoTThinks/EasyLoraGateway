@@ -38,6 +38,19 @@ void mqttMessageReceived(String &topic, String &payload) {
   Serial.println("incoming: " + topic + " - " + payload);
 }
 
+void publishToMQTT(String message) {
+  //The loop() function is a built in function that will read the receive and send buffers
+  // and process any messages it finds.
+  mqttClient.loop(); // Why need this?
+  delay(10);
+  
+  if (!mqttClient.connected()) {
+    connectToMQTT();
+  }
+
+  mqttClient.publish("/hello", message);
+}
+
 void testMQTT() {
   mqttClient.loop(); // Why need this?
   delay(10);  // <- fixes some issues with WiFi stability. Why need this?

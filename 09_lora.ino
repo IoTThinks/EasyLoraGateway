@@ -8,16 +8,24 @@
 #define LORA_MOSI  5
 #define LORA_MISO  36
 #define LORA_DIO012      39
+#define LORA_RESET  -1 // Not in used
+
+#define LORA_SF 7
+#define LORA_CR 4 //4/5
+#define LORA_BW 125E3
+#define LORA_PREAMBLE_LENGTH  8
+
+
 
 void setupLora() {
   Serial.println("Setting up LoRa");
   
   SPI.begin(LORA_SCK, LORA_MISO, LORA_MOSI, LORA_SS);
-  LoRa.setPins(LORA_SS, -1, LORA_DIO012);
-  LoRa.setSpreadingFactor(7);
-  LoRa.setCodingRate4(5); //4/5
-  LoRa.setSignalBandwidth(125E3);
-  LoRa.setPreambleLength(8);
+  LoRa.setPins(LORA_SS, LORA_RESET, LORA_DIO012);
+  LoRa.setSpreadingFactor(LORA_SF);
+  LoRa.setCodingRate4(LORA_CR); //4/5
+  LoRa.setSignalBandwidth(LORA_BW);
+  LoRa.setPreambleLength(LORA_PREAMBLE_LENGTH);
   delay(1000);
   
   while (!LoRa.begin(433E6)) {
@@ -64,22 +72,33 @@ void sendLoraMessage(){
   delay(5000);
 }
 
-void receiveLoraMessage(){
+String receiveLoraMessage(){
     // try to parse packet
   int packetSize = LoRa.parsePacket();
+  String receivedLoraMessage="";
+  
   if (packetSize) {
     // received a packet
     Serial.print("Received packet '");
 
     // read packet
     while (LoRa.available()) {
-      Serial.print((char)LoRa.read());
+      receivedLoraMessage +=(char)LoRa.read();
     }
 
+    // Print message
+    Serial.print(receivedLoraMessage);
+    
     // print RSSI of packet
     Serial.print("' with RSSI ");
     Serial.println(LoRa.packetRssi());
     dataReceivedLED();
   }
+
+  return receivedLoraMessage;
+}
+
+void testReceiveLoraMessage() {
+  receiveLoraMessage();
 }
 
