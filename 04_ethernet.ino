@@ -3,6 +3,8 @@
 // ====================================
 // https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi/examples
 static bool eth_connected = false;
+WiFiClient netClient;
+
 void setupEthernet()
 {
     WiFi.onEvent(WiFiEvent);
@@ -52,20 +54,20 @@ void httpGet(const char * host, uint16_t port)
   Serial.print("\nconnecting to ");
   Serial.println(host);
 
-  WiFiClient client;
-  if (!client.connect(host, port)) {
+  //WiFiClient client;
+  if (!netClient.connect(host, port)) {
     Serial.println("connection failed");
     return;
   }
   
-  client.printf("GET / HTTP/1.1\r\nHost: %s\r\n\r\n", host);
-  while (client.connected() && !client.available());
-  while (client.available()) {
-    Serial.write(client.read());
+  netClient.printf("GET / HTTP/1.1\r\nHost: %s\r\n\r\n", host);
+  while (netClient.connected() && !netClient.available());
+  while (netClient.available()) {
+    Serial.write(netClient.read());
   }
 
   Serial.println("closing connection\n");
-  client.stop();
+  netClient.stop();
 }
 
 void testHttpGet()
@@ -78,8 +80,3 @@ void testHttpGet()
   }
   delay(1000);
 }
-
-
-
-
-

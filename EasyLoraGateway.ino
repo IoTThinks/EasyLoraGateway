@@ -22,21 +22,25 @@
 #include <SPI.h>
 #include <LoRa.h>
 
+// =====================
+// MQTT
+// =====================
+#include <MQTT.h>
+
 // ===================================================
 // Main Program
 // ===================================================
 void setup() {
    setupSerial();
-   setupLED();
-   
-   // Delay to easily see log in serial connection
-   delay(5000);
+   setupLED();  
    setupEthernet();
    delay(5000);
+   setupMQTT();
    setupLora();
 }
 
 void loop() {  
-  receiveLoraMessage();
+  //receiveLoraMessage();
   //testHttpGet();
+  testMQTT();
 }
