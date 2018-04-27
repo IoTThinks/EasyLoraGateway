@@ -1,4 +1,10 @@
 // https://github.com/256dpi/arduino-mqtt
+// =====================
+// MQTT
+// =====================
+#include <MQTT.h>
+
+// Definitions
 #define mqttBrokerServer "broker.shiftr.io"
 #define mqttNamespace "vinhdat82~easyloragateway"
 #define mqttUsername "iotthinks"

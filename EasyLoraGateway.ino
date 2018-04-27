@@ -1,5 +1,5 @@
 // =====================
-// Ethernet
+// Ethernet - MUST PUT IN MAIN
 // =====================
 #define ETH_PHY_MDIO 0
 #define ETH_PHY_ADDR 1
@@ -10,22 +10,6 @@
 
 // Must be after #define
 #include <ETH.h>
-
-// =====================
-// Lora
-// =====================
-#define LORA_SS 23
-#define LORA_SCK  18
-#define LORA_MOSI 5
-#define LORA_MISO 36
-#define LORA_DIO012 39
-#include <SPI.h>
-#include <LoRa.h>
-
-// =====================
-// MQTT
-// =====================
-#include <MQTT.h>
 
 // ===================================================
 // Main Program
