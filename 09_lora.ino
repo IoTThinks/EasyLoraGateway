@@ -25,12 +25,12 @@
 #define LORA_PREAMBLE_LENGTH  8
 
 // Status
-String LORA_STATUS="Not Initialized";
-String LORA_LASTRECEIVED_MSG ="";
+String LORA_Status = "Not Initialized";
+String LORA_Lastreceived_Msg ="--No data--";
 
 // Setup Lora
 void setupLora() {
-  Serial.println("Setting up LoRa");
+  Serial.println("[LoRa] Setting up LoRa");
   
   SPI.begin(LORA_SCK, LORA_MISO, LORA_MOSI, LORA_SS);
   LoRa.setPins(LORA_SS, LORA_RESET, LORA_DIO012);
@@ -41,48 +41,22 @@ void setupLora() {
   delay(1000);
   
   while (!LoRa.begin(433E6)) {
-    Serial.println("Starting LoRa failed!");    
-    LORA_STATUS="FAILED";
+    Serial.println("[LoRa] Starting LoRa failed!");    
+    LORA_Status="FAILED";
     delay(1000);
   }
 
-  loraStartOKLED();
-  LORA_STATUS = "OK";
-  // register the receive callback
-  //LoRa.onReceive(onReceive);
-
-  // put the radio into receive mode
-  //LoRa.receive();
+  LORA_Status = "OK";
 }
 
-void onReceive(int packetSize) {
-  // received a packet
-  Serial.print("Received packet '");
-
-  // read packet
-  for (int i = 0; i < packetSize; i++) {
-    Serial.println((char)LoRa.read());
-  }
-
-  // print RSSI of packet
-  Serial.print("' with RSSI ");
-  Serial.println(LoRa.packetRssi());
-}
-
-int counter = 0;
-void sendLoraMessage(){
-  Serial.println("Sending packet: ");
-  Serial.println(counter);
+// NOT tested yet
+void sendLoraMessage(String message){
+  Serial.println("[LoRa]=> Sending packet: " + message);
 
   // send packet
   LoRa.beginPacket();
-  LoRa.print("This is Easy Lora Gateway ");
-  LoRa.print(counter);
+  LoRa.print(message);
   LoRa.endPacket();
-
-  counter++;
-
-  delay(5000);
 }
 
 String receiveLoraMessage(){
@@ -92,7 +66,7 @@ String receiveLoraMessage(){
   
   if (packetSize) {
     // received a packet
-    Serial.print("Received packet '");
+    Serial.print("[LoRa]<= Received packet: '");
 
     // read packet
     while (LoRa.available()) {
@@ -101,12 +75,11 @@ String receiveLoraMessage(){
 
     // Print message
     Serial.print(receivedLoraMessage);
-    LORA_LASTRECEIVED_MSG = receivedLoraMessage;
+    LORA_Lastreceived_Msg = receivedLoraMessage;
     
     // print RSSI of packet
     Serial.print("' with RSSI ");
     Serial.println(LoRa.packetRssi());
-    dataReceivedLED();
   }
 
   return receivedLoraMessage;

@@ -11,6 +11,11 @@
 // Must be after #define
 #include <ETH.h>
 
+// =====================
+// OTA - MUST PUT IN MAIN
+// =====================
+#include <HttpFOTA.h>
+
 // ===================================================
 // Main Program
 // ===================================================
@@ -18,11 +23,14 @@ void setup() {
    setupSerial();
    setupLED();  
    setupEthernet();
-   delay(5000);
+   delay(10000);
    setupMQTT();
-   setupLora();
-   delay(5000);
+   setupLora();   
    setupWebServer();
+   delay(1000);
+   setupOTA();
+   delay(5000);
+   displayLEDErrorCode();
 }
 
 void loop() {  
@@ -31,13 +39,13 @@ void loop() {
   //testMQTT();
   receiveAndForwardLoraMessage();
   runWebServer();
+  //getNewOTA();
 }
 
 void receiveAndForwardLoraMessage(){
   String message = receiveLoraMessage();
-  if(message != ""){
-    Serial.println("Forward to MQTT: " + message);
-    publishToMQTT(message);
+  if(message != ""){    
+    forwardNodeMessageToMQTT(message);
   }
 }
 

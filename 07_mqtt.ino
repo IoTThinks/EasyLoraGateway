@@ -9,12 +9,14 @@
 #define mqttNamespace "vinhdat82~easyloragateway"
 #define mqttUsername "iotthinks"
 #define mqttSecret "easyloragateway"
+#define mqttTopic_FromNodes "/iotthinks/easyloragateway/nodes/from/messages"
+
 MQTTClient mqttClient;
 
 unsigned long lastMillis = 0;
 
-String MQTT_STATUS = "Not Initialized";
-String MQTT_LASTSENT_MSG;
+String MQTT_Status = "Not Initialized";
+String MQTT_Lastsent_Msg = "--No data--";
 
 void setupMQTT() {
   // Should be connected to internet
@@ -25,30 +27,31 @@ void setupMQTT() {
 }
 
 void connectToMQTT() {
-  Serial.print("Checking ethernet...");
   while (!eth_connected) {
-    Serial.println("ETH not connected. Try to reconnect ETH.");
+    Serial.println("[MQTT] ETH not connected. Try to reconnect ETH.");
     setupEthernet();
     delay(1000);
   }
 
   while (!mqttClient.connect(mqttNamespace, mqttUsername, mqttSecret)) {
-    Serial.print("MQTT not connected. Try to reconnect to MQTT.");
+    Serial.println("[MQTT] MQTT not connected. Try to reconnect to MQTT.");
     delay(1000);
   }
 
-  Serial.println("MQTT is connected");
-  MQTT_STATUS = "OK";
+  Serial.println("[MQTT] Connected to MQTT.");
+  MQTT_Status = "OK";
   
   mqttClient.subscribe("/hello");
   // mqttClient.unsubscribe("/hello");
 }
 
 void mqttMessageReceived(String &topic, String &payload) {
-  Serial.println("incoming: " + topic + " - " + payload);
+  Serial.println("[MQTT]<= Received message from MQTT: " + payload + " [Topic: " + topic + "]");
 }
 
-void publishToMQTT(String message) {
+void publishToMQTT(String topic, String message) {
+  Serial.println("[MQTT]=> Send message to MQTT: " + message + " [Topic: " + topic + "]");
+  
   //The loop() function is a built in function that will read the receive and send buffers
   // and process any messages it finds.
   mqttClient.loop(); // Why need this?
@@ -58,21 +61,19 @@ void publishToMQTT(String message) {
     connectToMQTT();
   }
 
-  mqttClient.publish("/hello", message);
-  MQTT_LASTSENT_MSG = message;
+  mqttClient.publish(topic, message);
+  MQTT_Lastsent_Msg = message;
+}
+
+void forwardNodeMessageToMQTT(String message)
+{
+  publishToMQTT(mqttTopic_FromNodes, message);  
 }
 
 void testMQTT() {
-  mqttClient.loop(); // Why need this?
-  delay(10);  // <- fixes some issues with WiFi stability. Why need this?
-
-  if (!mqttClient.connected()) {
-    connectToMQTT();
-  }
-
   // publish a message roughly every second.
   if (millis() - lastMillis > 1000) {
     lastMillis = millis();
-    mqttClient.publish("/hello", "Easy Lora Gateway");
+    publishToMQTT("/hello", "Easy Lora Gateway");
   }
 }

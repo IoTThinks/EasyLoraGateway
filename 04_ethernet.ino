@@ -4,8 +4,8 @@
 // https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi/examples
 static bool eth_connected = false;
 WiFiClient netClient;
-String ETH_STATUS;
-String ETH_IP;
+String ETH_Status;
+String ETH_Ip;
 
 void setupEthernet()
 {
@@ -17,20 +17,20 @@ void WiFiEvent(WiFiEvent_t event)
 {
   switch (event) {
     case SYSTEM_EVENT_ETH_START:
-      Serial.println("ETH Started");
+      Serial.println("[ETH] ETH Started");
       //set eth hostname here
       ETH.setHostname("EasyLoraGateway");
       break;
     case SYSTEM_EVENT_ETH_CONNECTED:
-      Serial.println("ETH Connected");
-      ETH_STATUS = "Connected. No IP Yet";
+      Serial.println("[ETH] ETH Connected");
+      ETH_Status = "Connected. No IP Yet";
       break;
     case SYSTEM_EVENT_ETH_GOT_IP:
-      Serial.print("ETH MAC: ");
+      Serial.print("[ETH] ETH MAC: ");
       Serial.print(ETH.macAddress());
       Serial.print(", IPv4: ");
-      ETH_IP = ETH.localIP().toString();
-      Serial.print(ETH_IP);
+      ETH_Ip = ETH.localIP().toString();
+      Serial.print(ETH_Ip);
       if (ETH.fullDuplex()) {
         Serial.print(", FULL_DUPLEX");
       }
@@ -38,18 +38,17 @@ void WiFiEvent(WiFiEvent_t event)
       Serial.print(ETH.linkSpeed());
       Serial.println("Mbps");
       eth_connected = true;
-      ethStartOKLED();
-      ETH_STATUS = "Connected. IP: " + ETH_IP;
+      ETH_Status = "OK";
       break;
     case SYSTEM_EVENT_ETH_DISCONNECTED:
-      Serial.println("ETH Disconnected");
+      Serial.println("[ETH] ETH Disconnected");
       eth_connected = false;
-      ETH_STATUS = "Not Connected";
+      ETH_Status = "Disconnected";
       break;
     case SYSTEM_EVENT_ETH_STOP:
-      Serial.println("ETH Stopped");
+      Serial.println("[ETH] ETH Stopped");
       eth_connected = false;
-      ETH_STATUS = "Not Connected";
+      ETH_Status = "Stopped";
       break;
     default:
       break;
@@ -58,12 +57,12 @@ void WiFiEvent(WiFiEvent_t event)
 
 void httpGet(const char * host, uint16_t port)
 {
-  Serial.print("\nconnecting to ");
+  Serial.print("\n[ETH] Connecting to ");
   Serial.println(host);
 
   //WiFiClient client;
   if (!netClient.connect(host, port)) {
-    Serial.println("connection failed");
+    Serial.println("[ETH] Connection failed");
     return;
   }
   
@@ -79,11 +78,5 @@ void httpGet(const char * host, uint16_t port)
 
 void testHttpGet()
 {
-  if (eth_connected) {
-    httpGet("iotthinks.com", 80);
-  }
-  else  {
-    Serial.println("Ethernet not connected");
-  }
-  delay(1000);
+  httpGet("iotthinks.com", 80);
 }
