@@ -22,3 +22,7 @@ HAVE FUN.
 - Support Lora, MQTT and local Web server
 - Able to received Lora packets from a Lora node and forward to MQTT server.
 - Added a simple Web server to display the gateway status
+
+ 
+<h2>Helpful third-party tools:</h2>
+- MQTT Client: Used to publish and subcribe MQTT message: http://www.jensd.de/apps/mqttfx/
