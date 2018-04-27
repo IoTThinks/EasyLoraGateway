@@ -41,7 +41,8 @@ void connectToMQTT() {
   Serial.println("[MQTT] Connected to MQTT.");
   MQTT_Status = "OK";
   
-  mqttClient.subscribe("/hello");
+  // mqttClient.subscribe("/hello");
+  mqttClient.subscribe("/iotthinks/easyloragateway/nodes/to/ota");
   // mqttClient.unsubscribe("/hello");
 }
 
@@ -50,12 +51,7 @@ void mqttMessageReceived(String &topic, String &payload) {
 }
 
 void publishToMQTT(String topic, String message) {
-  Serial.println("[MQTT]=> Send message to MQTT: " + message + " [Topic: " + topic + "]");
-  
-  //The loop() function is a built in function that will read the receive and send buffers
-  // and process any messages it finds.
-  mqttClient.loop(); // Why need this?
-  delay(10);
+  Serial.println("[MQTT]=> Send message to MQTT: " + message + " [Topic: " + topic + "]");  
   
   if (!mqttClient.connected()) {
     connectToMQTT();
@@ -63,6 +59,12 @@ void publishToMQTT(String topic, String message) {
 
   mqttClient.publish(topic, message);
   MQTT_Lastsent_Msg = message;
+}
+
+// Read the MQTT receive and send buffers and process any messages it finds.
+void flushMQTTBuffer() {
+  mqttClient.loop(); // Why need this?
+  delay(10);
 }
 
 void forwardNodeMessageToMQTT(String message)

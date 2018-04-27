@@ -34,12 +34,17 @@ void setup() {
 }
 
 void loop() {  
-  //testReceiveLoraMessage();
   //testHttpGet();
   //testMQTT();
   receiveAndForwardLoraMessage();
+  processMQTTMessages();
   runWebServer();
   //getNewOTA();
+}
+
+void processMQTTMessages() {
+  // Send receive from MQTT buffer
+  flushMQTTBuffer();
 }
 
 void receiveAndForwardLoraMessage(){
