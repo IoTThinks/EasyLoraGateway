@@ -17,6 +17,7 @@ HAVE FUN.
 - Auto update sketch (firmware) to the gateway
 - Save gateway configuration to flash
 - Create basic web authentication for management web
+- Auto retransmit packets if not received an acknowledge from gateway / node. (Requested by Anthony Vu - 2018-0428)
 
 <b>Updated 2018-04-26</b>
 - Support Lora, MQTT and local Web server
