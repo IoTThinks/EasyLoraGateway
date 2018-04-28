@@ -17,7 +17,7 @@ HAVE FUN.
 - Auto update sketch (firmware) to the gateway
 - Save gateway configuration to flash
 - Create basic web authentication for management web
-- Listen Before Talk to avoid packet colission. (Nguyen Huynh - 2018-04-27)
+- Listen Before Talk to avoid packet collision. (Nguyen Huynh - 2018-04-27)
 - Auto retransmit packets if not received an acknowledge from gateway / node. (Requested by Anthony Vu - 2018-04-28)
 
 <b>Updated 2018-04-26</b>
