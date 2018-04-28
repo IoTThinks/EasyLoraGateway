@@ -1,5 +1,5 @@
 # EasyLoraGateway
-EasyLoraGateway is an easy-to-use Lora Gateway for home users and small businesses.
+Easy Lora Gateway is an easy-to-use Lora Gateway for home users and small businesses.
 
 In this project, we would like to create a simple and easy single channel Lora Gateway for programmers and Lora lovers to use. This gateway will use an ESP32 with Lora module (AI-Thinker 32 - SX1278) from CloudFermi http://www.cloudfermi.com.
 EasyLoraGateway will have the following features:
@@ -14,7 +14,7 @@ We will have a full box package at http://iotthinks.com (Coming soon).
 HAVE FUN.
 
 <b>Related projects</b>
-Easy Lora Gateway works with Easy Lora Node (https://github.com/IoTThinks/EasyLoraNode).
+- Easy Lora Node: Works with Easy Lora Gateway. https://github.com/IoTThinks/EasyLoraNode
 
 <b>TODO - New features</b>
 - Auto update sketch (firmware) to the gateway
