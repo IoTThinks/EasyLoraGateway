@@ -21,7 +21,8 @@ HAVE FUN.
 - Save gateway configuration to flash
 - Create basic web authentication for management web
 - Listen Before Talk to avoid packet collision. (Nguyen Huynh - 2018-04-27)
-- Auto retransmit packets if not received an acknowledge from gateway / node. (Requested by Anthony Vu - 2018-04-28)
+- Auto retransmit packets if not received an acknowledge from gateway / node. (Suggested by Anthony Vu - 2018-04-28)
+- Add Option to gateway: Pull or push messages to nodes (Suggested by Gnourt Gnoc Maht - 2018-05-02)
 
 <b>Updated 2018-04-26</b>
 - Support Lora, MQTT and local Web server
