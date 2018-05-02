@@ -20,11 +20,14 @@ HAVE FUN.
 - Auto retransmit packets if not received an acknowledge from gateway / node. (Suggested by Anthony Vu - 2018-04-28)
 - Add Option to gateway: Pull or push messages to nodes (Suggested by Gnourt Gnoc Maht - 2018-05-02)
 
+<b>Updated 2018-05-02</b>
+- Added hardware page for Easy LoRa gateway and node.
+- Added base code for Easy LoRa Node.
+
 <b>Updated 2018-04-26</b>
 - Support LoRa, MQTT and local Web server
 - Able to received Lora packets from a LoRa node and forward to MQTT server.
 - Added a simple Web server to display the gateway status
-
  
 <h2>Helpful third-party tools:</h2>
 - MQTT Client: Used to publish and subcribe MQTT message: http://www.jensd.de/apps/mqttfx/
