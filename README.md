@@ -10,7 +10,6 @@ EasyLoraGateway will have the following features:
 5. Ability to be cloud managed via cloud portral.
 6. Ability to display a local web server for basic configuration of all the above.
 
-We will have a full box package at http://iotthinks.com (Coming soon).
 HAVE FUN.
 
 <b>TODO - New features</b>
