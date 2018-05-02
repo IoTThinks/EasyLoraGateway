@@ -13,9 +13,6 @@ EasyLoraGateway will have the following features:
 We will have a full box package at http://iotthinks.com (Coming soon).
 HAVE FUN.
 
-<b>Related projects</b>
-- Easy Lora Node: Works with Easy Lora Gateway. https://github.com/IoTThinks/EasyLoraNode
-
 <b>TODO - New features</b>
 - Auto update sketch (firmware) to the gateway
 - Save gateway configuration to flash
