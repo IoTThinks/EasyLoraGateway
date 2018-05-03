@@ -35,3 +35,9 @@ void displayLEDErrorCode() {
   }
 }
 
+void dataReceivedLED() {
+  onLED();
+  delay(50);
+  offLED();  
+}
+

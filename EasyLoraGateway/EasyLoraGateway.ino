@@ -10,47 +10,49 @@
 
 // Must be after #define
 #include <ETH.h>
-
-// =====================
-// OTA - MUST PUT IN MAIN
-// =====================
-#include <HttpFOTA.h>
-
 // ===================================================
 // Main Program
 // ===================================================
-void setup() {
+// This runs once when the gateway boots. 
+// The delay is not neccessary and just to avoid component re-initizalized by other compopents.
+// setupXXX functions are placed in module files
+void setup() {  
    setupSerial();
    setupLED();  
    setupEthernet();
-   delay(10000);
-   setupMQTT();
-   setupLora();   
-   setupWebServer();
    delay(1000);
+   setupMQTT();
+   setupLoRa();   
+   setupWebServer();
+   delay(10000);
    setupOTA();
-   delay(5000);
+   delay(1000);
    displayLEDErrorCode();
 }
 
+// Do the real works here
 void loop() {  
-  //testHttpGet();
-  //testMQTT();
-  receiveAndForwardLoraMessage();
+  // Working
+  receiveAndForwardLoRaMessage();
   processMQTTMessages();
   runWebServer();
-  //getNewOTA();
+  
+  // TODO: When to accept OTA update?
+  waitingForOTA();
 }
 
+// Need to flush buffer to send or receive MQTT messages
 void processMQTTMessages() {
-  // Send receive from MQTT buffer
+  // Send / receive from MQTT buffer
   flushMQTTBuffer();
 }
 
-void receiveAndForwardLoraMessage(){
-  String message = receiveLoraMessage();
+// Receive LoRa message and send to MQTT Server
+void receiveAndForwardLoRaMessage(){
+  String message = receiveLoRaMessage();
   if(message != ""){    
     forwardNodeMessageToMQTT(message);
+    dataReceivedLED();
   }
 }
 

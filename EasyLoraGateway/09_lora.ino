@@ -29,7 +29,7 @@ String LORA_Status = "Not Initialized";
 String LORA_Lastreceived_Msg ="--No data--";
 
 // Setup Lora
-void setupLora() {
+void setupLoRa() {
   Serial.println("[LoRa] Setting up LoRa");
   
   SPI.begin(LORA_SCK, LORA_MISO, LORA_MOSI, LORA_SS);
@@ -49,7 +49,7 @@ void setupLora() {
   LORA_Status = "OK";
 }
 
-String receiveLoraMessage() {
+String receiveLoRaMessage() {
   int packetSize = LoRa.parsePacket();
   if (packetSize == 0) return "";          // if there's no packet, return
 
@@ -90,11 +90,12 @@ String receiveLoraMessage() {
   Serial.println();
   */
 
+  LORA_Lastreceived_Msg = incoming;
   return incoming;
 }
 
 // NOT tested yet
-void sendLoraMessage(String outgoing) {
+void sendLoRaMessage(String outgoing) {
   Serial.println("[LoRa]=> Sending packet: " + outgoing);
   LoRa.beginPacket();                   // start packet
   /*
