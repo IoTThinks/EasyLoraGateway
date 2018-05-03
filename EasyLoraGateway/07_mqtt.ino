@@ -2,8 +2,6 @@
 // =====================
 // MQTT
 // =====================
-#include <MQTT.h>
-
 // Definitions
 #define mqttBrokerServer "broker.shiftr.io"
 #define mqttNamespace "vinhdat82~easyloragateway"

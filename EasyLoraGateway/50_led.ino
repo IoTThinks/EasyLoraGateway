@@ -1,7 +1,6 @@
 // ====================================
 // LED
 // ====================================
-#define LED       32
 String LED_Status = "Not initalized";
 
 void setupLED() {

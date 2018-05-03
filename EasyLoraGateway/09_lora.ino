@@ -2,28 +2,6 @@
 // Lora
 // https://github.com/sandeepmistry/arduino-LoRa/blob/master/API.md
 // ====================================
-#define LORA_SS 23
-#define LORA_SCK  18
-#define LORA_MOSI 5
-#define LORA_MISO 36
-#define LORA_DIO012 39
-#include <SPI.h>
-#include <LoRa.h>
-
-// Definitions
-// CC2530 ZNP SPI interface
-#define LORA_SS   23
-#define LORA_SCK   18
-#define LORA_MOSI  5
-#define LORA_MISO  36
-#define LORA_DIO012      39
-#define LORA_RESET  -1 // Not in used
-
-#define LORA_SF 7
-#define LORA_CR 4 //4/5
-#define LORA_BW 125E3
-#define LORA_PREAMBLE_LENGTH  8
-
 // Status
 String LORA_Status = "Not Initialized";
 String LORA_Lastreceived_Msg ="--No data--";

@@ -5,11 +5,6 @@
 // http://www.iotsharing.com/2017/11/firmware-update-ota-for-esp32-using-http.html
 // https://github.com/nhatuan84/esp32-http-fota
 // ====================================
-// =====================
-// OTA - MUST PUT IN MAIN
-// =====================
-#include <HttpFOTA.h>
-
 // Definitions
 #define OTA_TOPIC "/iotthinks/easyloragateway/nodes/to/ota"
 

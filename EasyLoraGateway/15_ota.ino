@@ -2,7 +2,6 @@
 // Update firmware (Sketch) via Ethernet
 // https://diyprojects.io/arduinoota-esp32-wi-fi-ota-wireless-update-arduino-ide
 // ====================================
-#include <ArduinoOTA.h>
 
 void setupOTA() {
   Serial.println("[OTA] Setup OTA");
