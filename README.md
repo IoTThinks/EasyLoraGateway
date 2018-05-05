@@ -13,8 +13,8 @@ Easy LoRa Gateway will have the following features:
 HAVE FUN.
 
 ### 1. Source code and Documentation
-Source code: https://github.com/IoTThinks/EasyLoraGateway
-Documentation links: https://github.com/IoTThinks/EasyLoraGateway/wiki
+- Source code: https://github.com/IoTThinks/EasyLoraGateway
+- Documentation links: https://github.com/IoTThinks/EasyLoraGateway/wiki
 
 ### 2. What is NEW?
 <b>Updated 2018-05-02</b>
