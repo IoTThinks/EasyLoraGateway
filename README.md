@@ -36,5 +36,5 @@ Documentation links: https://github.com/IoTThinks/EasyLoraGateway/wiki
 - Add Option to gateway: Pull or push messages to nodes (Suggested by Gnourt Gnoc Maht - 2018-05-02)
 
  ### 4. Useful links
-<h2>Helpful third-party tools:</h2>
+<b>Helpful third-party tools:</b>
 - MQTT Client: Used to publish and subcribe MQTT message: http://www.jensd.de/apps/mqttfx/
