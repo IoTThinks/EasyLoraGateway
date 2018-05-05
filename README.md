@@ -12,6 +12,10 @@ Easy LoRa Gateway will have the following features:
 
 HAVE FUN.
 
+## Source code and Documentation
+Source code: https://github.com/IoTThinks/EasyLoraGateway
+Documentation links: https://github.com/IoTThinks/EasyLoraGateway/wiki
+
 ## What is NEW?
 <b>Updated 2018-05-02</b>
 - Added hardware page for Easy LoRa gateway and node.
@@ -31,6 +35,6 @@ HAVE FUN.
 - Auto retransmit packets if not received an acknowledge from gateway / node. (Suggested by Anthony Vu - 2018-04-28)
 - Add Option to gateway: Pull or push messages to nodes (Suggested by Gnourt Gnoc Maht - 2018-05-02)
 
- ## LINKS
+ ## USEFUL LINKS
 <h2>Helpful third-party tools:</h2>
 - MQTT Client: Used to publish and subcribe MQTT message: http://www.jensd.de/apps/mqttfx/
