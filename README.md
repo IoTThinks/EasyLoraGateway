@@ -1,10 +1,10 @@
 # Easy LoRa Gateway
 Easy LoRa Gateway is an easy-to-use LoRa Gateway for home users and small businesses.
 
-In this project, we would like to create a simple and easy single channel LoRa Gateway for programmers and LoRa lovers to use. This gateway will use an ESP32 with LoRa module (AI-Thinker 32 - SX1278) from CloudFermi http://www.cloudfermi.com.
+In this project, we would like to create a simple and easy single channel LoRa Gateway for programmers and LoRa lovers to use. This gateway will use an ESP32 with LoRa module (AI-Thinker 32 - SX1278).
 Easy LoRa Gateway will have the following features:
 1. Ability to receive and transmit Lora packets concurrently (but in single channel of course)
-2. Ability to forward Lora messages to a centralized servers (MQTT?)
+2. Ability to forward Lora messages to a MQTT centralized servers
 3. Ability to trigger HTTP requests and ping via Ethernet.
 4. Ability to save information to an optional SD Card.
 5. Ability to be cloud managed via cloud portral.
@@ -12,7 +12,7 @@ Easy LoRa Gateway will have the following features:
 
 HAVE FUN.
 
-<b>TODO - New features</b>
+<b>TODO</b>
 - Auto update sketch (firmware) to the gateway
 - Save gateway configuration to flash
 - Create basic web authentication for management web
