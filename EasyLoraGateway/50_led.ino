@@ -1,6 +1,8 @@
 // ====================================
 // LED
 // ====================================
+// LEDs are connected anode to +5, cathode to i/o pin
+// So pin set to LOW will on the LED
 String LED_Status = "Not initalized";
 
 void setupLED() {
