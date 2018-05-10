@@ -1,7 +1,7 @@
 // ====================================
 // LED
 // ====================================
-// LEDs are connected anode to +5, cathode to i/o pin
+// LEDs are connected anode to +5, cathode to i/o pin. Aka: Active LOW.
 // So pin set to LOW will on the LED
 String LED_Status = "Not initalized";
 
