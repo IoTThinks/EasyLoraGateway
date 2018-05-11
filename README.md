@@ -14,11 +14,11 @@ Easy LoRa Gateway will have the following features:
 * Kevin Le V. Dat (HCM)- Computer Science - Engineer - ASP.NET, Linux, Networking, Security
 * Cuong Bui (HCM) - Electrical and Electronic Engineering - Engineer - Hardware innovator
 * Dao D. Nam (HCM) - Mechatronic Engineering - Engineer in automotive domain.
-* Truong C. Tham - Mechatronics - Engineer - R&D for IoT gateway in farming
-* Le C. Binh - Senior embedded developer - 4-year experience in automotive domain, 2 year experience in IoT startups
+* Truong C. Tham (Da Nang) - Mechatronics - Engineer - R&D for IoT gateway in farming
+* Le C. Binh (HCM) - Senior embedded developer - 4-year experience in automotive domain, 2 year experience in IoT startups
 * Huynh T. Dat (HCM) -  Electronic and Telecommunications - Student of HCMUT - Experience in MQTT, Thingsboard, LoRa
 * Le C. V. Khai (Da Nang) - Electrical & Telecommunication Engineering - Student of Da Nang University of Technology - Web programing, ESP8266, MQTT, LoRa
-* Nguyen T. Trieu - QA Engineer - LoRa, ESP, STM, Android App, RF
+* Nguyen T. Trieu (HCM) - QA Engineer - LoRa, ESP, STM, Android App, RF
 * Le H. Cong (HCM) - Electrical & Telecommunication Engineering - Networking, System, Security - New to IoT
 * Le V. Hieu (Ha Noi) - Hanoi University of Science and Technology - Student - High tech farming
 * Nguyen A. Tuan (Ha Noi) -  Military Technology Academy - Student - IoT projects in school.
