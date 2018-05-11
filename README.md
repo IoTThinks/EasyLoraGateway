@@ -10,6 +10,16 @@ Easy LoRa Gateway will have the following features:
 5. Ability to be cloud managed via cloud portral.
 6. Ability to display a local web server for basic configuration of all the above.
 
+### Main contributors
+* Kevin Le Vinh Dat - Computer Science - Engineer - ASP.NET, Linux, Networking, Security
+* Cuong Bui - Electrical and Electronic Engineering - Engineer - Hardware innovator
+* Dao D. Nam - Mechatronic Engineering - Engineer in automotive domain.
+* Truong C. Tham - Mechatronics - Engineer - R&D for IoT gateway in farming
+* Le C. Binh - Senior embedded developer - 4-year experience in automotive domain, 2 year experience in IoT startups
+* Huynh T. Dat - Computer Engineer - Student of HCMUT - Experience in MQTT, Thingsboard, LoRa
+* Le C. V. Khai - Electrical & Telecommunication Engineering - Student of Da Nang University of Technology - Web programing, ESP8266, MQTT, LoRa
+* Nguyen T. Trieu - QA Engineer - LoRa, ESP, STM, Android App, RF
+
 HAVE FUN.
 
 ### 1. Source code and Documentation
