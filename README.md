@@ -11,7 +11,7 @@ Easy LoRa Gateway will have the following features:
 6. Ability to display a local web server for basic configuration of all the above.
 
 ### Main contributors
-* Kevin Le V. Dat (HCM)- Computer Science - Engineer - ASP.NET, Linux, Networking, Security
+* 1. Kevin Le V. Dat (HCM)- Computer Science - Engineer - ASP.NET, Linux, Networking, Security
 * Cuong Bui (HCM) - Electrical and Electronic Engineering - Engineer - Hardware innovator
 * Dao D. Nam (HCM) - Mechatronic Engineering - Engineer in automotive domain.
 * Truong C. Tham (Da Nang) - Mechatronics - Engineer - R&D for IoT gateway in farming
