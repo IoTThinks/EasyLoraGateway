@@ -23,6 +23,9 @@ Easy LoRa Gateway will have the following features:
 * Le V. Hieu (Ha Noi) - Hanoi University of Science and Technology - Student - High tech farming
 * Nguyen A. Tuan (Ha Noi) -  Military Technology Academy - Student - IoT projects in school.
 * Bui G. Thinh (Da Nang) - Engineer - 2- year experience in ESP8266 and ESP32
+* Nguyen N. Hau (HCM) - Posts and Telecommunications Institute of Technology - Student - Nodejs and realtime monitor with webserver
+* Le Q. Sang (HCM) - Posts and Telecommunications Institute of Technology - Student - Linux, AVR, STM32
+* Cao A. Khoi (USA) - Iowa State University - Computer Engineering - Embedded Systems and Electronic design - IoT Monitor system in farming (using a chain-linked network + 3G), MQTT on ESP32, 8266 platforms, BLE, Android and RTOS.
 
 HAVE FUN.
 
