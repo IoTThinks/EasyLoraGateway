@@ -11,21 +11,21 @@ Easy LoRa Gateway will have the following features:
 6. Ability to display a local web server for basic configuration of all the above.
 
 ### Main contributors
-* 1. Kevin Le V. Dat (HCM)- Computer Science - Engineer - ASP.NET, Linux, Networking, Security
-* Cuong Bui (HCM) - Electrical and Electronic Engineering - Engineer - Hardware innovator
-* Dao D. Nam (HCM) - Mechatronic Engineering - Engineer in automotive domain.
-* Truong C. Tham (Da Nang) - Mechatronics - Engineer - R&D for IoT gateway in farming
-* Le C. Binh (HCM) - Senior embedded developer - 4-year experience in automotive domain, 2 year experience in IoT startups
-* Huynh T. Dat (HCM) -  Electronic and Telecommunications - Student of HCMUT - Experience in MQTT, Thingsboard, LoRa
-* Le C. V. Khai (Da Nang) - Electrical & Telecommunication Engineering - Student of Da Nang University of Technology - Web programing, ESP8266, MQTT, LoRa
-* Nguyen T. Trieu (HCM) - QA Engineer - LoRa, ESP, STM, Android App, RF
-* Le H. Cong (HCM) - Electrical & Telecommunication Engineering - Networking, System, Security - New to IoT
-* Le V. Hieu (Ha Noi) - Hanoi University of Science and Technology - Student - High tech farming
-* Nguyen A. Tuan (Ha Noi) -  Military Technology Academy - Student - IoT projects in school.
-* Bui G. Thinh (Da Nang) - Engineer - 2- year experience in ESP8266 and ESP32
-* Nguyen N. Hau (HCM) - Posts and Telecommunications Institute of Technology - Student - Nodejs and realtime monitor with webserver
-* Le Q. Sang (HCM) - Posts and Telecommunications Institute of Technology - Student - Linux, AVR, STM32
-* Cao A. Khoi (USA) - Iowa State University - Computer Engineering - Embedded Systems and Electronic design - IoT Monitor system in farming (using a chain-linked network + 3G), MQTT on ESP32, 8266 platforms, BLE, Android and RTOS.
+1. Kevin Le V. Dat (HCM)- Computer Science - Engineer - ASP.NET, Linux, Networking, Security
+2. Cuong Bui (HCM) - Electrical and Electronic Engineering - Engineer - Hardware innovator
+3. Dao D. Nam (HCM) - Mechatronic Engineering - Engineer in automotive domain.
+4. Truong C. Tham (Da Nang) - Mechatronics - Engineer - R&D for IoT gateway in farming
+5. Le C. Binh (HCM) - Senior embedded developer - 4-year experience in automotive domain, 2 year experience in IoT startups
+6. Huynh T. Dat (HCM) -  Electronic and Telecommunications - Student of HCMUT - Experience in MQTT, Thingsboard, LoRa
+7. Le C. V. Khai (Da Nang) - Electrical & Telecommunication Engineering - Student of Da Nang University of Technology - Web programing, ESP8266, MQTT, LoRa
+8. Nguyen T. Trieu (HCM) - QA Engineer - LoRa, ESP, STM, Android App, RF
+9. Le H. Cong (HCM) - Electrical & Telecommunication Engineering - Networking, System, Security - New to IoT
+10. Le V. Hieu (Ha Noi) - Hanoi University of Science and Technology - Student - High tech farming
+11. Nguyen A. Tuan (Ha Noi) -  Military Technology Academy - Student - IoT projects in school.
+12. Bui G. Thinh (Da Nang) - Engineer - 2- year experience in ESP8266 and ESP32
+13. Nguyen N. Hau (HCM) - Posts and Telecommunications Institute of Technology - Student - Nodejs and realtime monitor with webserver
+14. Le Q. Sang (HCM) - Posts and Telecommunications Institute of Technology - Student - Linux, AVR, STM32
+15. Cao A. Khoi (USA) - Iowa State University - Computer Engineering - Embedded Systems and Electronic design - IoT Monitor system in farming (using a chain-linked network + 3G), MQTT on ESP32, 8266 platforms, BLE, Android and RTOS.
 
 HAVE FUN.
 
