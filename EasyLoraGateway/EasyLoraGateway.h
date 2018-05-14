@@ -27,11 +27,6 @@
 // =====================
 // LoRa
 // =====================
-#define LORA_SS 23
-#define LORA_SCK  18
-#define LORA_MOSI 5
-#define LORA_MISO 36
-#define LORA_DIO012 39
 #include <SPI.h>
 #include <LoRa.h>
 
