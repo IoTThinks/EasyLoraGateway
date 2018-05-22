@@ -26,7 +26,7 @@ Easy LoRa Gateway will have the following features:
 13. Nguyen N. Hau (HCM) - Posts and Telecommunications Institute of Technology - Student - Nodejs and realtime monitor with webserver
 14. Le Q. Sang (HCM) - Posts and Telecommunications Institute of Technology - Student - Linux, AVR, STM32
 15. Cao A. Khoi (USA) - Iowa State University - Computer Engineering - Embedded Systems and Electronic design - IoT Monitor system in farming (using a chain-linked network + 3G), MQTT on ESP32, 8266 platforms, BLE, Android and RTOS.
-<b>2018-05-19 Meetup 1<b>
+<b>2018-05-19 Meetup 1</b>
 16. Le V. Thien (HCM)
 17. Nguyen M. Canh (HCM)
 
