@@ -34,7 +34,7 @@ HAVE FUN.
 ### 1. Source code and Documentation
 - Source code: https://github.com/IoTThinks/EasyLoraGateway
 - Documentation links: https://github.com/IoTThinks/EasyLoraGateway/wiki
-- File Drive (For file documentation and manuals): https://tinyurl.com/EasyLoRa-Drive
+- File Drive (For file documentation and ebooks): https://tinyurl.com/EasyLoRa-Drive
 
 ### 2. What is NEW?
 <b>Updated 2018-05-02</b>
