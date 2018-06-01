@@ -3,8 +3,6 @@ Easy LoRa Gateway is an OPEN SOURCE and easy-to-use LoRa Gateway to connect all 
 
 ![lora-architecture](https://user-images.githubusercontent.com/29994971/39509846-e379354c-4e11-11e8-8562-74e18c5b2291.jpg)
 
-HAVE FUN.
-
 ## A. GOALS:
 - Business goal: We can commercialize combo of long range sensors to home users, residential houses, buildings and firms. Or even farming areas.
 - Technical goal: The gateway is to communicate with IoT sensors within 1-10km. Then the gateway will forward the messages to a centralized server for further processing.
