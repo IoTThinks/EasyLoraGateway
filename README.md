@@ -1,5 +1,6 @@
 # Easy LoRa Gateway
 Easy LoRa Gateway is an OPEN SOURCE and easy-to-use LoRa Gateway to connect all types of sensors within 1-10km for home and small business users.
+* Facebook Group: https://www.facebook.com/groups/IoTThinksGlobal (For community support)
 
 ![lora-architecture](https://user-images.githubusercontent.com/29994971/39509846-e379354c-4e11-11e8-8562-74e18c5b2291.jpg)
 
